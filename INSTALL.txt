@@ -1,0 +1,279 @@
+=================================================================
+        PANDUAN INSTALASI WEBSITE KAMPUS MODERN
+                     VERSI 3.0
+=================================================================
+
+📋 DAFTAR ISI
+-------------
+1. Persyaratan Sistem
+2. Download & Install Node.js
+3. Extract Project
+4. Install Dependencies
+5. Setup Groq API Key
+6. Jalankan Server
+7. Test Website
+8. Troubleshooting
+
+
+=================================================================
+1️⃣ PERSYARATAN SISTEM
+=================================================================
+
+✅ Windows 10/11, macOS, atau Linux
+✅ Koneksi internet (untuk download & API)
+✅ Minimal 2GB RAM
+✅ 200MB ruang disk
+
+
+=================================================================
+2️⃣ DOWNLOAD & INSTALL NODE.JS
+=================================================================
+
+🌐 LANGKAH 1: Download Node.js
+------------------------------
+1. Buka browser
+2. Kunjungi: https://nodejs.org
+3. Pilih versi LTS (Long Term Support)
+4. Download sesuai OS Anda:
+   - Windows: nodejs-v20.x.x-x64.msi
+   - macOS: nodejs-v20.x.x.pkg
+   - Linux: ikuti instruksi di website
+
+
+🔧 LANGKAH 2: Install Node.js
+------------------------------
+1. Jalankan installer yang sudah didownload
+2. Klik "Next" → "Next" → "Install"
+3. Tunggu sampai selesai
+4. Klik "Finish"
+
+
+✅ LANGKAH 3: Verifikasi Instalasi
+-----------------------------------
+Buka Command Prompt/Terminal:
+- Windows: tekan Win+R, ketik "cmd", Enter
+- macOS: tekan Cmd+Space, ketik "terminal"
+- Linux: Ctrl+Alt+T
+
+Ketik perintah ini:
+
+    node --version
+
+Harusnya muncul: v20.x.x (atau versi lain)
+
+    npm --version
+
+Harusnya muncul: 10.x.x (atau versi lain)
+
+Jika muncul angka versi = BERHASIL! ✅
+
+
+=================================================================
+3️⃣ EXTRACT PROJECT
+=================================================================
+
+1. Klik kanan file ZIP: campus-website-v3.zip
+2. Pilih "Extract All" atau "Extract Here"
+3. Tunggu sampai selesai
+4. Buka folder hasil extract
+
+
+=================================================================
+4️⃣ INSTALL DEPENDENCIES
+=================================================================
+
+📂 LANGKAH 1: Masuk ke Folder Project
+--------------------------------------
+Buka Command Prompt/Terminal di folder project:
+
+CARA 1 (Windows):
+- Buka folder project di File Explorer
+- Klik di address bar
+- Ketik "cmd" lalu Enter
+
+CARA 2 (Semua OS):
+- Buka Command Prompt/Terminal
+- Ketik: cd path/ke/campus-website-v3
+
+
+📦 LANGKAH 2: Install Dependencies
+-----------------------------------
+Ketik perintah ini:
+
+    npm install
+
+Tunggu proses download & install (1-3 menit)
+
+Jika berhasil, akan muncul:
+    
+    added 86 packages
+    found 0 vulnerabilities
+
+✅ BERHASIL!
+
+
+=================================================================
+5️⃣ SETUP GROQ API KEY
+=================================================================
+
+🔑 LANGKAH 1: Dapatkan API Key GRATIS
+--------------------------------------
+1. Buka browser: https://console.groq.com/
+2. Klik "Sign Up" (daftar akun baru)
+   ATAU "Sign In" (jika sudah punya akun)
+3. Login dengan Google Account (GRATIS!)
+4. Setelah login, klik menu "API Keys"
+5. Klik tombol "Create API Key"
+6. Copy API Key yang muncul
+   Format: gsk_xxxxxxxxxxxxxxxxxxxxxxxx
+
+
+📝 LANGKAH 2: Masukkan API Key
+-------------------------------
+1. Buka file: .env (di folder project)
+2. Gunakan text editor (Notepad, VS Code, dll)
+3. Cari baris:
+   
+   GROQ_API_KEY=gsk_your_api_key_here
+
+4. Ganti "gsk_your_api_key_here" dengan API Key Anda
+   Contoh:
+   
+   GROQ_API_KEY=gsk_abc123xyz789def456ghi
+
+5. SAVE file (Ctrl + S)
+
+⚠️ PENTING: Jangan share API Key ke orang lain!
+
+
+=================================================================
+6️⃣ JALANKAN SERVER
+=================================================================
+
+Di Command Prompt/Terminal (di folder project), ketik:
+
+    npm start
+
+Tunggu sebentar...
+
+Jika berhasil, akan muncul:
+
+    🚀 Server berjalan di http://localhost:3000
+    📚 Website Kampus siap digunakan!
+
+✅ SERVER SUDAH RUNNING!
+
+
+=================================================================
+7️⃣ TEST WEBSITE
+=================================================================
+
+🌐 LANGKAH 1: Buka Browser
+---------------------------
+1. Buka browser (Chrome, Firefox, Edge)
+2. Ketik di address bar:
+
+   http://localhost:3000
+
+3. Tekan Enter
+
+
+✅ LANGKAH 2: Test Semua Fitur
+-------------------------------
+1. ✅ Halaman Beranda - Cek hero, fitur, form daftar
+2. ✅ Halaman Tentang - Lihat visi-misi, timeline
+3. ✅ Halaman Program - Lihat detail program studi
+4. ✅ Halaman Fasilitas - Lihat fasilitas kampus
+5. ✅ Halaman Kontak - Test form kontak
+6. ✅ Chatbot - Klik icon chat, ketik "Halo"
+
+
+🤖 LANGKAH 3: Test Chatbot
+---------------------------
+1. Lihat pojok kanan bawah
+2. Klik icon chat (bulat dengan icon comment)
+3. Ketik: "Halo"
+4. Tunggu sebentar...
+5. Chatbot akan menjawab! ✅
+
+Contoh pertanyaan:
+- "Apa saja program studi yang tersedia?"
+- "Bagaimana cara mendaftar?"
+- "Berapa biaya kuliah?"
+- "Ada beasiswa tidak?"
+
+
+=================================================================
+8️⃣ TROUBLESHOOTING
+=================================================================
+
+❌ MASALAH 1: Chatbot Tidak Menjawab
+-------------------------------------
+SOLUSI:
+1. Cek API Key di file .env
+2. Pastikan format: GROQ_API_KEY=gsk_xxxxx
+3. Restart server:
+   - Tekan Ctrl+C di terminal
+   - Ketik: npm start
+4. Refresh browser (F5)
+
+
+❌ MASALAH 2: npm install Error
+-------------------------------
+SOLUSI:
+1. Hapus folder node_modules (jika ada)
+2. Ketik: npm cache clean --force
+3. Ketik lagi: npm install
+
+
+❌ MASALAH 3: Port 3000 Already in Use
+--------------------------------------
+SOLUSI:
+1. Edit file .env
+2. Ubah PORT=3000 jadi PORT=3001
+3. Jalankan lagi: npm start
+4. Buka: http://localhost:3001
+
+
+❌ MASALAH 4: Halaman Tidak Muncul
+----------------------------------
+SOLUSI:
+1. Cek server running di terminal
+2. Buka: http://localhost:3000 (bukan https)
+3. Clear cache browser (Ctrl+Shift+Del)
+4. Refresh (Ctrl+F5)
+
+
+❌ MASALAH 5: Groq API Error
+-----------------------------
+SOLUSI:
+1. Cek kredit API di https://console.groq.com/
+2. Pastikan API Key benar (copy paste ulang)
+3. Cek koneksi internet
+
+
+=================================================================
+🎉 SELAMAT!
+=================================================================
+
+Website kampus Anda sudah berhasil diinstall dan berjalan!
+
+Langkah selanjutnya:
+1. Ubah nama kampus (lihat: CARA-UBAH-NAMA-KAMPUS.txt)
+2. Customize warna & konten (edit: config/campusConfig.js)
+3. Test semua fitur website
+4. Deploy ke hosting (opsional)
+
+
+📞 BUTUH BANTUAN?
+-----------------
+1. Baca README.md
+2. Baca CARA-UBAH-NAMA-KAMPUS.txt
+3. Cek dokumentasi Groq: https://console.groq.com/docs
+
+
+=================================================================
+
+Terima kasih sudah menggunakan Website Kampus Modern! 🚀
+
+Made with ❤️ using Node.js, Express, EJS, and Groq AI
